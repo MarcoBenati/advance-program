@@ -9,6 +9,8 @@ app.controller('app1Controller',
         important:false
       }
       $scope.aggiungitodo=function(){
+
+
         console.log($scope.newTodo);
       }
 
