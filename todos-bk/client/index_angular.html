@@ -137,8 +137,7 @@
   <div class="col-lg-4" id="todofatti">
   <h2>Lista todo già fatti</h2>
       <ul>
-        <li>Todo1</li>
-        <li>Todo2</li>
+        <li ng-repeat="item in todosdone">{{item.name}}</li>
       </ul>
   </div>
 </div>

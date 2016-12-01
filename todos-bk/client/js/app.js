@@ -17,6 +17,21 @@ app.controller('app1Controller',
       }
 
       $scope.eseguitodo=function(idtodo){
+        for(i=0;$scope.todos.length;i++){
+          if ($scope.todos[i].id==idtodo){
+             $scope.todos[i].done=true;
+             Todos.upsert($scope.todos[i]).
+             $promise.
+              then(function(results) {
+             $scope.todos=[];
+             $scope.todosdone=[];
+             getTodos();
+             });
+             break;
+           }
+        }
+
+
         console.log("esegui"+idtodo);
       }
 
