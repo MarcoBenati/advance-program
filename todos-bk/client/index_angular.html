@@ -116,32 +116,15 @@
             <th>Importante</th>
             <th>Operazioni</th>
           </tr>
-          <tr>
-            <td>TODO1</td>
-            <td>Descrizion1</td>
-            <td>True/False</td>
-            <td><button ng-click="eseguitodo(1)" type="button" class="btn btn-success btn-xs">fatto</button>
-            <button ng-click="cancellatodo(1)" type="button" class="btn btn-danger btn-xs">cancella</button>
+          <tr ng-repeat="item in todos">
+            <td>{{item.name}}</td>
+            <td>{{item.description}}</td>
+            <td>{{item.important}}</td>
+            <td><button ng-click="eseguitodo(item.id)" type="button" class="btn btn-success btn-xs">fatto</button>
+            <button ng-click="cancellatodo(item.id)" type="button" class="btn btn-danger btn-xs">cancella</button>
             </td>
           </tr>
 
-          <tr>
-            <td>TODO1</td>
-            <td>Descrizion1</td>
-            <td>True/False</td>
-            <td><button type="button" class="btn btn-success btn-xs">fatto</button>
-            <button type="button" class="btn btn-danger btn-xs">cancella</button>
-            </td>
-          </tr>
-
-          <tr>
-            <td>TODO1</td>
-            <td>Descrizion1</td>
-            <td>True/False</td>
-            <td><button type="button" class="btn btn-success btn-xs">fatto</button>
-            <button type="button" class="btn btn-danger btn-xs">cancella</button>
-            </td>
-          </tr>
 
 
 
